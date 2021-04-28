@@ -28,7 +28,7 @@ const Login: React.FC = () => {
   return (
     <Wrapper>
       <Content>
-        <h1>Login</h1>
+        <h1>Welcome back!</h1>
         <FormContainer onSubmit={handleLogin}>
           <div>
             <InputStatement
@@ -48,7 +48,7 @@ const Login: React.FC = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <LoginButton type="submit">sign in</LoginButton>
+          <LoginButton type="submit">Sign In</LoginButton>
         </FormContainer>
       </Content>
     </Wrapper>
@@ -63,13 +63,14 @@ const Wrapper = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
 
-  width: 60%;
+  width: 27%;
 
-  background-color: #ffb366;
+  background-color: #fff;
   border-radius: 8px;
-  box-shadow: 10px 20px 30px rgba(255, 255, 255, 0.15);
+  border: 1px solid gainsboro;
+  box-shadow: 10px 20px 30px rgba(0, 0, 0, 0.15);
 
-  padding: 1.4rem;
+  padding: 7rem 0;
 
   * {
     box-sizing: border-box;
@@ -80,7 +81,6 @@ const Content = styled.div`
   display: grid;
   gap: 1rem;
 
-  justify-content: center;
   justify-items: center;
 `;
 
@@ -93,7 +93,7 @@ const FormContainer = styled.form`
 const InputStatement = styled.input`
   padding: 1rem 0.8rem;
 
-  border: none;
+  border: 1px solid #262626;
   border-radius: 8px;
 `;
 
@@ -104,9 +104,16 @@ const LoginButton = styled.button`
   width: 100%;
 
   border-radius: 8px;
-  background-color: #1F4B99;
+  background-color: #1f4b99;
   color: #fff;
 
   font-size: 1rem;
   font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.4s ease-in;
+  &:hover {
+    transform: translateY(-3px) scale(1.05);
+  }
 `;
